@@ -1,0 +1,11 @@
+cars:
+- skoda
+- bmw
+- audi
+- vw
+count: 4
+price:
+  audi: 15000€
+  bmw: 20000€
+  skoda: 10000€
+  vw: 12000€
