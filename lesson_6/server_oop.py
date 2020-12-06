@@ -6,6 +6,7 @@ from additionals.utils import send_msg, receive_msg
 from additionals.errors import IncorrectData
 from logging import getLogger
 from log.config import server_log_config
+from decos import log, Log
 
 
 class Server:
@@ -36,20 +37,20 @@ class Server:
                         self.messages += 1
                         self.logger.info(f'server got {self.messages} messages since has been started')
                     self.response = self.check_presence(self.message)
-                    self.send()
-                    self.logger.debug(f'message sent to {self.client}')
-                    self.client.close()
+                    self.send(self.client, self.response)
 
                 except json.JSONDecodeError:
                     self.logger.error(f'json decode error')
 
-                except IncorrectData:
-                    self.logger.error(f'received incorrect data')
+                # except IncorrectData:
+                #     self.logger.error(f'received incorrect data')
 
         except KeyboardInterrupt:
             self.logger.warning(f'server stopped by user')
             self.sock.close()
 
+    @Log()
+    @log
     def check_presence(self, message):
         self.logger.debug(f'Checking presence from {self.client}: {message}')
         if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
@@ -59,11 +60,16 @@ class Server:
         self.logger.error(f'created answer to client - {RESPONSE_400}')
         return RESPONSE_400
 
-    def send(self):
-        send_msg(self.client, self.response)
+    @Log()
+    @log
+    def send(self, *args):
+        send_msg(*args)
         self.logger.debug(f'message sent to {self.client} with {self.response}')
         self.logger.debug(f'connection closed to {self.client}')
         self.client.close()
+
+    def __str__(self):
+        return {'Server.app'}
 
 
 if __name__ == '__main__':

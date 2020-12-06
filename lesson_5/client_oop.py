@@ -1,7 +1,6 @@
 from socket import socket, AF_INET, SOCK_STREAM
 from additionals.settings import DEFAULT_PORT, DEFAULT_IP, ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR
 from additionals.utils import send_msg, receive_msg
-from additionals.errors import IncorrectData
 from logging import getLogger
 from log.config import client_log_config
 import time, json, sys
@@ -17,7 +16,6 @@ class Client:
             self.logger.debug(f'clients starts with {self.connection_addr}:{self.connection_port}')
             if 65535 < self.connection_port < 1024:
                 raise ValueError
-
         except IndexError:
             self.connection_port = DEFAULT_PORT
             self.connection_addr = DEFAULT_IP
@@ -35,22 +33,17 @@ class Client:
                 ACCOUNT_NAME: name
             }
         }
-        self.logger.debug(f'client created presence: {self.presence}')
+        self.logger.debug(f"client created presence: {self.presence}")
         return self.presence
 
     def presence_response(self, message):
-        try:
-            if RESPONSE in message:
-                if message[RESPONSE] == 200:
-                    return '200 : OK'
-                return f'400 : {message[ERROR]}'
-            raise IncorrectData
-
-        except IncorrectData:
-            self.logger.error(f'received incorrect data')
+        if RESPONSE in message:
+            if message[RESPONSE] == 200:
+                return '200 : OK'
+            return f'400 : {message[ERROR]}'
+        raise ValueError
 
     def start(self):
-
         try:
             self.sock = socket(AF_INET, SOCK_STREAM)
             self.logger.warning(f'client successfully started socket {self.sock}')
@@ -78,10 +71,8 @@ class Client:
 
 
 if __name__ == '__main__':
-
     try:
         client = Client()
         client.start()
-
     except SystemError:
         sys.exit(1)

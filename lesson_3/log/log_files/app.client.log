@@ -1,0 +1,30 @@
+2020-12-03 18:45:16,201      INFO          app started 
+2020-12-03 18:45:16,202      WARNING       attention! 
+2020-12-03 18:45:16,203      CRITICAL      critical error, shutdown the app 
+2020-12-03 20:28:39,486      INFO          app started
+2020-12-03 20:28:39,488      WARNING       attention!
+2020-12-03 20:28:39,488      CRITICAL      critical error, shutdown the app
+2020-12-03 20:29:26,329      INFO          app started
+2020-12-03 20:29:26,331      WARNING       attention!
+2020-12-03 20:29:26,331      CRITICAL      critical error, shutdown the app
+2020-12-03 22:17:44,076      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-03 22:17:44,078      DEBUG         client successfully started socket <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-03 22:17:44,079      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-03 22:17:44,079      DEBUG         client created presence: {'action': 'presence', 'time': 1607023064.079357, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:17:44,079      DEBUG         client sent message to <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 64925), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607023064.079357, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:17:44,082      INFO          client got response - 200 : OK
+2020-12-03 22:19:47,483      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-03 22:19:47,485      DEBUG         client successfully started socket <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-03 22:21:54,376      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-03 22:21:54,378      DEBUG         client successfully started socket <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-03 22:21:54,378      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-03 22:21:54,378      DEBUG         client created presence: {'action': 'presence', 'time': 1607023314.3788102, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:21:54,379      DEBUG         client sent message to <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65001), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607023314.3788102, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:21:54,386      INFO          client got response - 200 : OK
+2020-12-03 22:24:03,408      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-03 22:24:03,411      WARNING       client successfully started socket <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-03 22:24:03,412      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-03 22:24:03,412      DEBUG         client created presence: {'action': 'presence', 'time': 1607023443.4122822, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:24:03,412      DEBUG         client sent message to <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 65004), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607023443.4122822, 'user': {'account_name': 'Guest'}}
+2020-12-03 22:24:03,413      INFO          client got response - 200 : OK
+2020-12-03 22:24:03,413      WARNING       clients stops

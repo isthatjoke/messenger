@@ -1,5 +1,4 @@
-import sys, os
-
+import unittest, sys, os
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from unittest import TestCase
 from server_oop import Server

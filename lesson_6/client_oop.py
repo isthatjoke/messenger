@@ -5,6 +5,7 @@ from additionals.errors import IncorrectData
 from logging import getLogger
 from log.config import client_log_config
 import time, json, sys
+from decos import log, Log
 
 
 class Client:
@@ -27,6 +28,8 @@ class Client:
             self.logger.critical(f'port is out off range 1024 - 65535')
             sys.exit(1)
 
+    @Log()
+    @log
     def client_presence(self, name='Guest'):
         self.presence = {
             ACTION: PRESENCE,
@@ -38,6 +41,8 @@ class Client:
         self.logger.debug(f'client created presence: {self.presence}')
         return self.presence
 
+    @Log()
+    @log
     def presence_response(self, message):
         try:
             if RESPONSE in message:
@@ -49,6 +54,8 @@ class Client:
         except IncorrectData:
             self.logger.error(f'received incorrect data')
 
+    @Log()
+    @log
     def start(self):
 
         try:

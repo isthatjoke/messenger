@@ -1,6 +1,5 @@
 import json
 from .settings import ENCODING, PACK_CAPACITY
-from .errors import IncorrectType, IncorrectDataToDecode
 
 
 def send_msg(sock, message):
@@ -16,6 +15,6 @@ def receive_msg(sender):
         response = json.loads(msg_json) 
         if isinstance(response, dict):
             return response
-        raise IncorrectType
-    raise IncorrectDataToDecode
+        raise ValueError
+    raise ValueError
 

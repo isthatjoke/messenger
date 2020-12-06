@@ -1,9 +1,8 @@
 from socket import socket, AF_INET, SOCK_STREAM
-import sys, json
+import sys
 from additionals.settings import DEFAULT_PORT, DEFAULT_IP, MAX_CONNECTIONS,\
     RESPONSE_200, RESPONSE_400, ACTION, ACCOUNT_NAME, TIME, PRESENCE, USER
 from additionals.utils import send_msg, receive_msg
-from additionals.errors import IncorrectData
 from logging import getLogger
 from log.config import server_log_config
 
@@ -24,30 +23,19 @@ class Server:
     def start(self):
         self.sock.listen(MAX_CONNECTIONS)
         self.logger.debug('server started to listen socket')
-
         try:
             while True:
                 self.client, self.addr = self.sock.accept()
-
-                try:
-                    self.message = receive_msg(self.client)
-                    self.logger.debug(f'server got message from {self.client}')
-                    if self.message:
-                        self.messages += 1
-                        self.logger.info(f'server got {self.messages} messages since has been started')
-                    self.response = self.check_presence(self.message)
-                    self.send()
-                    self.logger.debug(f'message sent to {self.client}')
-                    self.client.close()
-
-                except json.JSONDecodeError:
-                    self.logger.error(f'json decode error')
-
-                except IncorrectData:
-                    self.logger.error(f'received incorrect data')
-
+                self.message = receive_msg(self.client)
+                self.logger.debug(f'server got message from {self.client}')
+                if self.message:
+                    self.messages += 1
+                    self.logger.info(f'server got {self.messages} messages since has been started')
+                self.response = self.check_presence(self.message)
+                self.send()
+                self.logger.debug(f'message sent to {self.client}')
         except KeyboardInterrupt:
-            self.logger.warning(f'server stopped by user')
+            self.logger.warning(f'server stopped')
             self.sock.close()
 
     def check_presence(self, message):
@@ -67,7 +55,6 @@ class Server:
 
 
 if __name__ == '__main__':
-
     try:
         app = Server(DEFAULT_IP, DEFAULT_PORT)
         app.start()
