@@ -38,6 +38,7 @@ class Server:
                         self.logger.info(f'server got {self.messages} messages since has been started')
                     self.response = self.check_presence(self.message)
                     self.send(self.client, self.response)
+                    self.logger.debug(f'message sent to {self.client}')
 
                 except json.JSONDecodeError:
                     self.logger.error(f'json decode error')

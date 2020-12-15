@@ -10,7 +10,7 @@ logger = getLogger('app.server')
 logger.setLevel(LOGGING_LEVEL)
 
 # formatter
-formatter = Formatter('%(asctime)-27s  %(levelname)-12s %(filename)-20s %(lineno)-5s  %(message)s')
+formatter = Formatter('%(asctime)-27s %(levelname)-12s %(filename)-20s %(lineno)-5s %(message)s')
 
 # handlers
 file_logger_handler = handlers.TimedRotatingFileHandler(PATH, encoding=ENCODING, interval=1, when='D')

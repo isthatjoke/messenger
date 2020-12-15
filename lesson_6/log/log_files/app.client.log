@@ -331,3 +331,102 @@
 2020-12-06 20:35:17,092      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fdf5016baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
 2020-12-06 20:35:17,092      INFO          client got response - 200 : OK
 2020-12-06 20:35:17,093      WARNING       clients stops
+2020-12-08 22:05:15,420      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 22:05:15,422      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 22:05:15,422      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 22:05:15,422      DEBUG         client created presence: {'action': 'presence', 'time': 1607454315.4227169, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:05:15,438      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:05:15,439      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7fbfbc96baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:05:15,439      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59900), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607454315.4227169, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:05:15,480      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:05:15,482      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fbfbc96baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:05:15,482      INFO          client got response - 200 : OK
+2020-12-08 22:05:15,482      WARNING       clients stops
+2020-12-08 22:07:22,804      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 22:07:22,804      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 22:07:22,805      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 22:07:22,805      DEBUG         client created presence: {'action': 'presence', 'time': 1607454442.805482, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:07:22,818      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:07:22,820      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7f9afe16baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:07:22,820      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59920), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607454442.805482, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:07:22,840      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:07:22,842      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7f9afe16baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:07:22,842      INFO          client got response - 200 : OK
+2020-12-08 22:07:22,842      WARNING       clients stops
+2020-12-08 22:20:20,544      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 22:20:20,545      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 22:20:20,546      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 22:20:20,546      DEBUG         client created presence: {'action': 'presence', 'time': 1607455220.546514, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:20:20,561      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:20:20,562      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7fbb6f16baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:20:20,566      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 59982), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607455220.546514, 'user': {'account_name': 'Guest'}}
+2020-12-08 22:20:20,580      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 22:20:20,581      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fbb6f16baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 22:20:20,581      INFO          client got response - 200 : OK
+2020-12-08 22:20:20,581      WARNING       clients stops
+2020-12-08 23:04:48,435      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 23:04:48,437      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 23:04:48,437      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 23:04:48,437      DEBUG         client created presence: {'action': 'presence', 'time': 1607457888.437598, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:04:48,452      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:04:48,454      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7ffd3f86baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:04:48,454      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60154), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607457888.437598, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:04:48,488      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:04:48,490      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7ffd3f86baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:04:48,490      INFO          client got response - 200 : OK
+2020-12-08 23:04:48,490      WARNING       clients stops
+2020-12-08 23:10:10,551      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 23:10:10,553      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 23:10:10,553      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 23:10:10,554      DEBUG         client created presence: {'action': 'presence', 'time': 1607458210.5541608, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:10:10,575      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:10:10,577      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7f938576baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:10:10,577      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60172), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607458210.5541608, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:10:10,601      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:10:10,603      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7f938576baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:10:10,603      INFO          client got response - 200 : OK
+2020-12-08 23:10:10,603      WARNING       clients stops
+2020-12-08 23:10:49,474      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 23:10:49,474      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 23:10:49,474      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 23:10:49,475      DEBUG         client created presence: {'action': 'presence', 'time': 1607458249.475014, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:10:49,488      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:10:49,489      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7fd4e286baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:10:49,490      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60178), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607458249.475014, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:10:49,492      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:10:49,493      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fd4e286baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:10:49,493      INFO          client got response - 200 : OK
+2020-12-08 23:10:49,493      WARNING       clients stops
+2020-12-08 23:11:00,150      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 23:11:00,151      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 23:11:00,151      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 23:11:00,151      DEBUG         client created presence: {'action': 'presence', 'time': 1607458260.15169, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:11:00,166      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:11:00,167      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7f92d416baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:11:00,167      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60180), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607458260.15169, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:11:00,169      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:11:00,170      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7f92d416baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:11:00,170      INFO          client got response - 200 : OK
+2020-12-08 23:11:00,170      WARNING       clients stops
+2020-12-08 23:11:17,960      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-08 23:11:17,960      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-08 23:11:17,961      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-08 23:11:17,961      DEBUG         client created presence: {'action': 'presence', 'time': 1607458277.961216, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:11:17,998      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:11:18,001      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7fbc88f6baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:11:18,001      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60184), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607458277.961216, 'user': {'account_name': 'Guest'}}
+2020-12-08 23:11:18,008      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-08 23:11:18,013      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fbc88f6baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-08 23:11:18,014      INFO          client got response - 200 : OK
+2020-12-08 23:11:18,014      WARNING       clients stops
+2020-12-09 13:46:51,620      DEBUG         clients starts without additional arguments with default settings - 127.0.0.1:9035
+2020-12-09 13:46:51,623      WARNING       client successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-09 13:46:51,624      DEBUG         client successfully connected to 127.0.0.1:9035
+2020-12-09 13:46:51,625      DEBUG         client created presence: {'action': 'presence', 'time': 1607510811.625588, 'user': {'account_name': 'Guest'}}
+2020-12-09 13:46:51,643      DEBUG         the function "client_presence" with params "()", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-09 13:46:51,644      DEBUG         (from class) the function "self.presence_msg=self.client_presence()" with params (<__main__.Client object at 0x7fa14c06baf0>,), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-09 13:46:51,644      DEBUG         client sent message to <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 50189), raddr=('127.0.0.1', 9035)> with {'action': 'presence', 'time': 1607510811.625588, 'user': {'account_name': 'Guest'}}
+2020-12-09 13:46:51,660      DEBUG         the function "presence_response" with params "({'response': 200},)", "{}" has been ordered from module "__main__", called from "save_to_log"
+2020-12-09 13:46:51,661      DEBUG         (from class) the function "self.response=self.presence_response(receive_msg(self.sock))" with params (<__main__.Client object at 0x7fa14c06baf0>, {'response': 200}), {} has been ordered from module <module '__main__' from '/Users/tzverev/PycharmProjects/messenger/lesson_6/client_oop.py'>, called from "start"
+2020-12-09 13:46:51,661      INFO          client got response - 200 : OK
+2020-12-09 13:46:51,661      WARNING       clients stops
