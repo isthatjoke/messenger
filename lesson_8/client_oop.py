@@ -1,7 +1,7 @@
 from threading import Thread
 from socket import socket, AF_INET, SOCK_STREAM
 from additionals.settings import DEFAULT_PORT, DEFAULT_IP, ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
-    RESPONSE, ERROR, MESSAGE, MESSAGE_TXT, SENDER, TO, EXIT
+    RESPONSE, ERROR, MESSAGE, MESSAGE_TXT, SENDER, TO, EXIT, RESPONSE_OK
 from additionals.utils import send_msg, receive_msg
 from additionals.errors import IncorrectData
 from logging import getLogger
@@ -66,7 +66,7 @@ class Client(Thread):
         try:
             if RESPONSE in message:
                 if message[RESPONSE] == 200:
-                    return '200 : OK'
+                    return RESPONSE_OK
                 return f'400 : {message[ERROR]}'
             raise IncorrectData
 
@@ -136,10 +136,13 @@ class Client(Thread):
             return self.message_to_server
 
         elif self.command == 'exit':
-            self.exit_message()
-            print('connection refused')
-            send_msg(self.sock, self.exit_message())
-            raise SystemExit()
+            try:
+                self.exit_message()
+                print('connection refused')
+                send_msg(self.sock, self.exit_message())
+                sys.exit(1)
+            finally:
+                sys.exit(1)
         else:
             print('incorrect command')
 
@@ -201,12 +204,17 @@ class Client(Thread):
             print('client exited')
             sys.exit(1)
 
-        # try:
-        #     self.response = self.presence_response(receive_msg(self.sock))
-        #     self.logger.info(f'client got response - {self.response}')
-        #
-        # except (ValueError, json.JSONDecodeError):
-        #     self.logger.error(f'JSONDecodeError, can not to encode message')
+        try:
+
+            self.response = self.presence_response(receive_msg(self.sock))
+            if self.response == RESPONSE_OK:
+                self.logger.info(f'client got response - {self.response}')
+            else:
+                self.logger.error(f'client got response - {self.response}')
+                sys.exit(1)
+
+        except (ValueError, json.JSONDecodeError):
+            self.logger.error(f'JSONDecodeError, can not to encode message')
 
         else:
 

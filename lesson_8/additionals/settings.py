@@ -27,6 +27,7 @@ MESSAGE_TXT = 'mess_text'
 TO = 'to'
 FROM = 'from'
 EXIT = 'exit'
+RESPONSE_OK = '200 : OK'
 
 # responses
 

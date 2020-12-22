@@ -1,0 +1,5 @@
+2020-12-21 00:01:00,137     WARNING      server_oop.py        36    server starts with 127.0.0.1:9350
+2020-12-21 00:01:00,138     DEBUG        server_oop.py        38    server successfully started socket <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 0)>
+2020-12-21 00:01:00,139     DEBUG        server_oop.py        40    server successfully got socket
+2020-12-21 00:01:00,139     DEBUG        server_oop.py        50    server started to listen socket
+2020-12-21 00:01:10,704     WARNING      server_oop.py        82    server stopped by user

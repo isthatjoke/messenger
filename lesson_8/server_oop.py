@@ -54,8 +54,7 @@ class Server:
                         self.r_clients, self.w_clients, self.e_clients = select.select(self.connected_clients,
                                                                                        self.connected_clients,
                                                                                        [], 0)
-                    print(self.r_clients)
-                    print(self.w_clients)
+
                 except OSError:
                     pass
 
@@ -95,7 +94,9 @@ class Server:
 
         elif ACTION in message and message[ACTION] == EXIT and TIME in message \
                 and MESSAGE_TXT in message and SENDER in message:
+
             self.connected_clients.remove(client)
+            self.names.pop(message[SENDER])
             client.close()
             return
 

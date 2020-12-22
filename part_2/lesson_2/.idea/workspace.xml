@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d41b0290-702d-4927-a2c7-3bad45227bfc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../lesson_1/.idea/lesson_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson_8/start_client_name_first.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson_8/start_client_name_second.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson_8/start_client_name_third.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/lesson_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/lesson_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/check_ip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/client_descriptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/server_descriptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additionals/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_oop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/config/client_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/config/server_log_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log_files/app.client.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log_files/app.server.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log_files/app.server.log.2020-12-14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log_files/app.server.log.2020-12-15" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_oop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stack.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_client_name_first.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_client_name_second.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_client_name_third.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_client_sender.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_clients.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start_server.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_7/log/log_files/app.server.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_7/log/log_files/app.server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/lesson_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/lesson_3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/additionals/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/additionals/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/additionals/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/additionals/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/additionals/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/additionals/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/additionals/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/additionals/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/client_oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/client_oop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/decos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/decos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/config/client_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/config/client_log_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/config/server_log_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/config/server_log_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.client.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.client.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.server.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.server.log.2020-12-14" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/log/log_files/app.server.log.2020-12-14" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/server_oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/server_oop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/stack.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/stack.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/start_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/start_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/start_server.command" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/start_server.command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/test/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/test/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/test/test_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/test/test_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/test/test_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_8/test/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_8/test/test_utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JupyterTrust" id="93c0eed2-a1b5-434f-9d5e-d27547f154b4" />
+  <component name="ProjectId" id="1lvoXBM8HxtVWoQuuftMj4ezIXY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Python.client_oop">
+    <configuration name="client_descriptor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesson_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/additionals" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/additionals/client_descriptor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="client_oop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesson_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client_oop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server_oop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesson_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_oop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.client_oop" />
+        <item itemvalue="Python.server_oop" />
+        <item itemvalue="Python.client_descriptor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d41b0290-702d-4927-a2c7-3bad45227bfc" name="Default Changelist" comment="" />
+      <created>1608486962505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608486962505</updated>
+      <workItem from="1608486963757" duration="6376000" />
+      <workItem from="1608497880043" duration="12474000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="297" key="GridCell.Tab.0.bottom" timestamp="1608666548546">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="297" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548546" />
+    <state width="1398" height="297" key="GridCell.Tab.0.center" timestamp="1608666548543">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="297" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548543" />
+    <state width="1398" height="297" key="GridCell.Tab.0.left" timestamp="1608666548542">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="297" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548542" />
+    <state width="1398" height="297" key="GridCell.Tab.0.right" timestamp="1608666548544">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="297" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548544" />
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom" timestamp="1608666548532">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="224" key="GridCell.Tab.1.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548532" />
+    <state width="1398" height="224" key="GridCell.Tab.1.center" timestamp="1608666548531">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="224" key="GridCell.Tab.1.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548531" />
+    <state width="1398" height="224" key="GridCell.Tab.1.left" timestamp="1608666548530">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="224" key="GridCell.Tab.1.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548530" />
+    <state width="1398" height="224" key="GridCell.Tab.1.right" timestamp="1608666548532">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="224" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608666548532" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1608659717277">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1608659717277" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lesson_2$client_oop.coverage" NAME="client_oop Coverage Results" MODIFIED="1608666505644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lesson_2$server_oop.coverage" NAME="server_oop Coverage Results" MODIFIED="1608666501025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lesson_2$client_descriptor.coverage" NAME="client_descriptor Coverage Results" MODIFIED="1608578876506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/additionals" />
+  </component>
+</project>
