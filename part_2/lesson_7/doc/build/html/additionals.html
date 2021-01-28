@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Additionals package &#8212; messenger 1.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Logs package" href="logs.html" />
+    <link rel="prev" title="Welcome to messenger’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="additionals-package">
+<h1>Additionals package<a class="headerlink" href="#additionals-package" title="Permalink to this headline">¶</a></h1>
+<p>A package of common utilities used in different modules of the project.</p>
+<div class="section" id="module-additionals.decos">
+<span id="script-decos-py"></span><h2>Script decos.py<a class="headerlink" href="#module-additionals.decos" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="additionals.decos.Log">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.decos.</code><code class="sig-name descname">Log</code><a class="headerlink" href="#additionals.decos.Log" title="Permalink to this definition">¶</a></dt>
+<dd><p>logger decorator class</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="additionals.decos.log">
+<code class="sig-prename descclassname">additionals.decos.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.decos.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>logger decorator func
+:param func:
+:return:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="script-client-descriptor-py">
+<h2>Script client_descriptor.py<a class="headerlink" href="#script-client-descriptor-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py attribute">
+<dt id="additionals.client_descriptor.PortVerifier">
+<code class="sig-prename descclassname">additionals.client_descriptor.</code><code class="sig-name descname">PortVerifier</code><a class="headerlink" href="#additionals.client_descriptor.PortVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">additionals.decos.Log.__call__.&lt;locals&gt;.save_to_log</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="additionals.client_descriptor.HostVerifier">
+<code class="sig-prename descclassname">additionals.client_descriptor.</code><code class="sig-name descname">HostVerifier</code><a class="headerlink" href="#additionals.client_descriptor.HostVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">additionals.decos.Log.__call__.&lt;locals&gt;.save_to_log</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="script-server-descriptor-py">
+<h2>Script server_descriptor.py<a class="headerlink" href="#script-server-descriptor-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py attribute">
+<dt id="additionals.server_descriptor.PortVerifier">
+<code class="sig-prename descclassname">additionals.server_descriptor.</code><code class="sig-name descname">PortVerifier</code><a class="headerlink" href="#additionals.server_descriptor.PortVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">additionals.decos.Log.__call__.&lt;locals&gt;.save_to_log</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="additionals.server_descriptor.HostVerifier">
+<code class="sig-prename descclassname">additionals.server_descriptor.</code><code class="sig-name descname">HostVerifier</code><a class="headerlink" href="#additionals.server_descriptor.HostVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">additionals.decos.Log.__call__.&lt;locals&gt;.save_to_log</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-additionals.check_ip">
+<span id="script-check-ip-py"></span><h2>Script check_ip.py<a class="headerlink" href="#module-additionals.check_ip" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="additionals.check_ip.check_first_octet">
+<code class="sig-prename descclassname">additionals.check_ip.</code><code class="sig-name descname">check_first_octet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.check_ip.check_first_octet" title="Permalink to this definition">¶</a></dt>
+<dd><p>check first octet of ip address
+:param data: int
+:return: bool</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="additionals.check_ip.check_forth_octet">
+<code class="sig-prename descclassname">additionals.check_ip.</code><code class="sig-name descname">check_forth_octet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.check_ip.check_forth_octet" title="Permalink to this definition">¶</a></dt>
+<dd><p>check forth octet of ip address
+:param data: int
+:return: bool</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="additionals.check_ip.check_ip">
+<code class="sig-prename descclassname">additionals.check_ip.</code><code class="sig-name descname">check_ip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.check_ip.check_ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if ip address is correct
+:param ip: str ip address
+:return: bool, true if ip is correct</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="additionals.check_ip.check_second_third_octets">
+<code class="sig-prename descclassname">additionals.check_ip.</code><code class="sig-name descname">check_second_third_octets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.check_ip.check_second_third_octets" title="Permalink to this definition">¶</a></dt>
+<dd><p>check second and third octets of ip address
+:param data: int
+:return: bool</p>
+</dd></dl>
+
+</div>
+<div class="section" id="script-errors-py">
+<h2>Script errors.py<a class="headerlink" href="#script-errors-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="additionals.errors.IncorrectData">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.errors.</code><code class="sig-name descname">IncorrectData</code><a class="headerlink" href="#additionals.errors.IncorrectData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="additionals.errors.IncorrectType">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.errors.</code><code class="sig-name descname">IncorrectType</code><a class="headerlink" href="#additionals.errors.IncorrectType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="additionals.errors.IncorrectDataToDecode">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.errors.</code><code class="sig-name descname">IncorrectDataToDecode</code><a class="headerlink" href="#additionals.errors.IncorrectDataToDecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="additionals.errors.ClientError">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.errors.</code><code class="sig-name descname">ClientError</code><a class="headerlink" href="#additionals.errors.ClientError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="script-client-meta-py">
+<h2>Script client_meta.py<a class="headerlink" href="#script-client-meta-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="additionals.client_meta.ClientVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.client_meta.</code><code class="sig-name descname">ClientVerifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">bases</span></em>, <em class="sig-param"><span class="n">dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.client_meta.ClientVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>meta class to check child class methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="script-server-meta-py">
+<h2>Script server_meta.py<a class="headerlink" href="#script-server-meta-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="additionals.server_meta.ServerVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">additionals.server_meta.</code><code class="sig-name descname">ServerVerifier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">bases</span></em>, <em class="sig-param"><span class="n">dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#additionals.server_meta.ServerVerifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>meta class to check child class methods</p>
+</dd></dl>
+
+</div>
+<div class="section" id="script-utils-py">
+<h2>Script utils.py<a class="headerlink" href="#script-utils-py" title="Permalink to this headline">¶</a></h2>
+<p>additionals.utils. <strong>receive_msg</strong> (sender)</p>
+<p>Function for receiving messages from remote computers. Accepts JSON messages,
+decodes the received message, and verifies that the dictionary is received.</p>
+<p>additionals.utils. <strong>send_msg</strong> (sock, message)</p>
+<p>Function for sending dictionaries via socket. Encodes the dictionary in JSON format and sends it via a socket.</p>
+</div>
+<div class="section" id="script-settings-py">
+<h2>Script settings.py<a class="headerlink" href="#script-settings-py" title="Permalink to this headline">¶</a></h2>
+<p>Contains different global variables of the project.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">messenger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Additionals package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-additionals.decos">Script decos.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-client-descriptor-py">Script client_descriptor.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-server-descriptor-py">Script server_descriptor.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-additionals.check_ip">Script check_ip.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-errors-py">Script errors.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-client-meta-py">Script client_meta.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-server-meta-py">Script server_meta.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-utils-py">Script utils.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#script-settings-py">Script settings.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Logs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client Module documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server Module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to messenger’s documentation!</a></li>
+      <li>Next: <a href="logs.html" title="next chapter">Logs package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, is_that_joke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/additionals.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

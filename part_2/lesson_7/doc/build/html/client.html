@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Module documentation &#8212; messenger 1.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Server Module" href="server.html" />
+    <link rel="prev" title="Logs package" href="logs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="client-module-documentation">
+<h1>Client Module documentation<a class="headerlink" href="#client-module-documentation" title="Permalink to this headline">¶</a></h1>
+<p>A client application for messaging. Supports
+sending messages to users who are online, messages are encrypted
+using the RSA algorithm with a key length of 2048 bits.</p>
+<p>Supports command line arguments:</p>
+<p>‘python client.py {server name} {port} -N or name {username} - N or-password, {password}`</p>
+<ol class="arabic simple">
+<li><p>{server name} - the address of the message server.</p></li>
+<li><p>{port} - the port on which connections are accepted</p></li>
+<li><p>-n or-name-the name of the user to log in with.</p></li>
+<li><p>-p or – password-the user’s password.</p></li>
+</ol>
+<p>All command-line options are optional, but the user name and password must be paired.</p>
+<p>Examples of usage:</p>
+<ul class="simple">
+<li><p>‘python client.py`</p></li>
+<li><p>Launch the app with the default settings.*</p></li>
+<li><p>‘python client.py ip_address some_port`</p></li>
+<li><p>Launch the application with instructions to connect to the server at ip_address: port*</p></li>
+<li><p><cite>python -n test1 -p 123</cite></p></li>
+<li><p>Launch the app with user test1 and password 123*</p></li>
+<li><p>‘python client.py ip_address some_port -n test1 -p 123`</p></li>
+<li><p>Launch the application with the user test1 and password 123 and the instruction to connect to the server at ip_address: port*</p></li>
+</ul>
+<div class="section" id="client-py">
+<h2>client.py<a class="headerlink" href="#client-py" title="Permalink to this headline">¶</a></h2>
+<p>Run the module contains a parser for command line arguments and functionality of the application is initialized.</p>
+<p>the client. ** arg_parser** ()
+Command-line argument parser, returns a tuple of 4 elements:</p>
+<ul class="simple">
+<li><p>server address</p></li>
+<li><p>port</p></li>
+<li><p>user name</p></li>
+<li><p>The password</p></li>
+</ul>
+<p>checks whether the port number is correct.</p>
+</div>
+<div class="section" id="client-database-py">
+<h2>client_database.py<a class="headerlink" href="#client-database-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.client_database.ClientDB">
+<em class="property">class </em><code class="sig-prename descclassname">client.client_database.</code><code class="sig-name descname">ClientDB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main class for client database for SQLAlchemy</p>
+<dl class="py class">
+<dt id="client.client_database.ClientDB.Contacts">
+<em class="property">class </em><code class="sig-name descname">Contacts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em>, <em class="sig-param"><span class="n">date_remove</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.Contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>contacts class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="client.client_database.ClientDB.History">
+<em class="property">class </em><code class="sig-name descname">History</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em>, <em class="sig-param"><span class="n">direction</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.History" title="Permalink to this definition">¶</a></dt>
+<dd><p>messages history class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="client.client_database.ClientDB.Users">
+<em class="property">class </em><code class="sig-name descname">Users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.Users" title="Permalink to this definition">¶</a></dt>
+<dd><p>all users class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.add_contact">
+<code class="sig-name descname">add_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.add_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>managing contact relations adding func
+:param contact: str name of contact
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.add_users">
+<code class="sig-name descname">add_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">users</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.add_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>add user to database
+:param users: list of users
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.check_contact">
+<code class="sig-name descname">check_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.check_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>check contact exists
+:param contact: str
+:return: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.check_user">
+<code class="sig-name descname">check_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.check_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>check user exists
+:param contact: str
+:return: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.del_contact">
+<code class="sig-name descname">del_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.del_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>managing contact relations deleting func
+:param contact: str name of contact
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.get_contacts">
+<code class="sig-name descname">get_contacts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.get_contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>contacts in relation request
+:return: list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.get_history">
+<code class="sig-name descname">get_history</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.get_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>message history request for user
+:param contact: name of contact
+:return: list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.get_users">
+<code class="sig-name descname">get_users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.get_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>all user request
+:return: list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_database.ClientDB.save_new_message">
+<code class="sig-name descname">save_new_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact</span></em>, <em class="sig-param"><span class="n">direction</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_database.ClientDB.save_new_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>save new message to message history table
+:param contact: name
+:param direction: incoming or outgoing message
+:param message: dict
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="client-connection-py">
+<h2>client_connection.py<a class="headerlink" href="#client-connection-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.client_connection.Client">
+<em class="property">class </em><code class="sig-prename descclassname">client.client_connection.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">password</span></em>, <em class="sig-param"><span class="n">database</span></em>, <em class="sig-param"><span class="n">keys</span></em>, <em class="sig-param"><span class="n">to_register</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_connection.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>main client class</p>
+<dl class="py method">
+<dt id="client.client_connection.Client.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_connection.Client.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method representing the thread’s activity.</p>
+<p>You may override this method in a subclass. The standard run() method
+invokes the callable object passed to the object’s constructor as the
+target argument, if any, with sequential and keyword arguments taken
+from the args and kwargs arguments, respectively.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="client-gui-py">
+<h2>client_gui.py<a class="headerlink" href="#client-gui-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.client_gui.ClientMainWindow">
+<em class="property">class </em><code class="sig-prename descclassname">client.client_gui.</code><code class="sig-name descname">ClientMainWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">database</span></em>, <em class="sig-param"><span class="n">sock</span></em>, <em class="sig-param"><span class="n">keys</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>main window GUI</p>
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.add_contact">
+<code class="sig-name descname">add_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.add_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>add new contact and save in database
+:param new_contact:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.add_contact_window">
+<code class="sig-name descname">add_contact_window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.add_contact_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>add new contact window
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.clients_list_update">
+<code class="sig-name descname">clients_list_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.clients_list_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>update contacts list
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.connection_lost">
+<code class="sig-name descname">connection_lost</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.connection_lost" title="Permalink to this definition">¶</a></dt>
+<dd><p>allert about lost connection
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.delete_contact">
+<code class="sig-name descname">delete_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.delete_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete contact and save in database
+:param item:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.delete_contact_window">
+<code class="sig-name descname">delete_contact_window</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.delete_contact_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete contact window
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.history_list_update">
+<code class="sig-name descname">history_list_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.history_list_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>messages history update
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.make_connection">
+<code class="sig-name descname">make_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trans_obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.make_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>signal connect function
+:param trans_obj:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.message">
+<code class="sig-name descname">message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>message receive and decrypt function. also open new chat with contact if it’s closed
+:param message:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.select_active_user">
+<code class="sig-name descname">select_active_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.select_active_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>select active user by click
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.send_message">
+<code class="sig-name descname">send_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.send_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>send message function with encryption
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.set_active_user">
+<code class="sig-name descname">set_active_user</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.set_active_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>set active user, get public key to encrypt
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.set_disabled_input">
+<code class="sig-name descname">set_disabled_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.set_disabled_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>disable send button if contact is not chosen
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.client_gui.ClientMainWindow.users_list_update">
+<code class="sig-name descname">users_list_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.client_gui.ClientMainWindow.users_list_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>update users list
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="client-window-py">
+<h2>client_window.py<a class="headerlink" href="#client-window-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.client_window.Ui_MainClientWindow">
+<em class="property">class </em><code class="sig-prename descclassname">client.client_window.</code><code class="sig-name descname">Ui_MainClientWindow</code><a class="headerlink" href="#client.client_window.Ui_MainClientWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>main GUI</p>
+</dd></dl>
+
+</div>
+<div class="section" id="login-py">
+<h2>login.py<a class="headerlink" href="#login-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.login.LoginWindow">
+<em class="property">class </em><code class="sig-prename descclassname">client.login.</code><code class="sig-name descname">LoginWindow</code><a class="headerlink" href="#client.login.LoginWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>login window GUI</p>
+<dl class="py method">
+<dt id="client.login.LoginWindow.check_verify">
+<code class="sig-name descname">check_verify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.login.LoginWindow.check_verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>verify equal between passcode and verify passcode lines
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.login.LoginWindow.event">
+<code class="sig-name descname">event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">e</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.login.LoginWindow.event" title="Permalink to this definition">¶</a></dt>
+<dd><p>func catch events about &lt;enter&gt; or &lt;esc&gt; buttons
+:param e: event
+:return: data for parent class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.login.LoginWindow.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.login.LoginWindow.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>get username from GUI
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="login-reg-window-py">
+<h2>login_reg_window.py<a class="headerlink" href="#login-reg-window-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.login_reg_window.Ui_Dialog">
+<em class="property">class </em><code class="sig-prename descclassname">client.login_reg_window.</code><code class="sig-name descname">Ui_Dialog</code><a class="headerlink" href="#client.login_reg_window.Ui_Dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>login window GUI settings</p>
+</dd></dl>
+
+</div>
+<div class="section" id="login-fail-py">
+<h2>login_fail.py<a class="headerlink" href="#login-fail-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.login_fail.LoginWindowFail">
+<em class="property">class </em><code class="sig-prename descclassname">client.login_fail.</code><code class="sig-name descname">LoginWindowFail</code><a class="headerlink" href="#client.login_fail.LoginWindowFail" title="Permalink to this definition">¶</a></dt>
+<dd><p>login fail window GUI</p>
+<dl class="py method">
+<dt id="client.login_fail.LoginWindowFail.event">
+<code class="sig-name descname">event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">e</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.login_fail.LoginWindowFail.event" title="Permalink to this definition">¶</a></dt>
+<dd><p>func catch events about &lt;enter&gt; or &lt;esc&gt; buttons
+:param e: event
+:return: data for parent class</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="login-fail-window-py">
+<h2>login_fail_window.py<a class="headerlink" href="#login-fail-window-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.login_fail_window.Ui_Dialog">
+<em class="property">class </em><code class="sig-prename descclassname">client.login_fail_window.</code><code class="sig-name descname">Ui_Dialog</code><a class="headerlink" href="#client.login_fail_window.Ui_Dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>login fail window GUI settings</p>
+</dd></dl>
+
+</div>
+<div class="section" id="add-contact-py">
+<h2>add_contact.py<a class="headerlink" href="#add-contact-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.add_contact.AddContactDialog">
+<em class="property">class </em><code class="sig-prename descclassname">client.add_contact.</code><code class="sig-name descname">AddContactDialog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sock</span></em>, <em class="sig-param"><span class="n">database</span></em>, <em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.add_contact.AddContactDialog" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="client.add_contact.AddContactDialog.possible_contacts_update">
+<code class="sig-name descname">possible_contacts_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.add_contact.AddContactDialog.possible_contacts_update" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of possible contact from database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="client.add_contact.AddContactDialog.update_possible_contacts">
+<code class="sig-name descname">update_possible_contacts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.add_contact.AddContactDialog.update_possible_contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>first of all update data from server database and then update client database
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="del-contact-py">
+<h2>del_contact.py<a class="headerlink" href="#del-contact-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="client.del_contact.DelContactDialog">
+<em class="property">class </em><code class="sig-prename descclassname">client.del_contact.</code><code class="sig-name descname">DelContactDialog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">database</span></em>, <em class="sig-param"><span class="n">contact</span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.del_contact.DelContactDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">messenger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="additionals.html">Additionals package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Logs package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client Module documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-py">client.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-database-py">client_database.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-connection-py">client_connection.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-gui-py">client_gui.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-window-py">client_window.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-py">login.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-reg-window-py">login_reg_window.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-fail-py">login_fail.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-fail-window-py">login_fail_window.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-contact-py">add_contact.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#del-contact-py">del_contact.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server Module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="logs.html" title="previous chapter">Logs package</a></li>
+      <li>Next: <a href="server.html" title="next chapter">Server Module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, is_that_joke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

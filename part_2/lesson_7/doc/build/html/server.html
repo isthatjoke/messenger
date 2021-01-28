@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Module &#8212; messenger 1.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Client Module documentation" href="client.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="server-module">
+<h1>Server Module<a class="headerlink" href="#server-module" title="Permalink to this headline">¶</a></h1>
+<p>The messenger server module. Processes dictionaries message, stores the public keys of the clients.</p>
+<p>Using</p>
+<p>The module holds the arguments of the command line:</p>
+<ol class="arabic simple">
+<li><p>-p - Port on which connections are accepted</p></li>
+<li><p>-a - The address from which connections are received.</p></li>
+</ol>
+<p>Usage examples:</p>
+<p>‘python server.py -p 8080`</p>
+<ul class="simple">
+<li><p>Starting the server on port 8080*</p></li>
+</ul>
+<p>‘python server.py -local host`</p>
+<ul class="simple">
+<li><p>Starting a server that accepts only connections to localhost*</p></li>
+</ul>
+<div class="section" id="server-py">
+<h2>server.py<a class="headerlink" href="#server-py" title="Permalink to this headline">¶</a></h2>
+<p>Run the module contains a parser for command line arguments and functionality of the application is initialized.</p>
+<p>server. ** arg_parser** ()
+Command-line argument parser, returns a tuple of 4 elements:</p>
+<ul class="simple">
+<li><p>the address from which to accept connections</p></li>
+<li><p>port</p></li>
+</ul>
+</div>
+<div class="section" id="server-database-py">
+<h2>server_database.py<a class="headerlink" href="#server-database-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="server.server_database.ServerDB">
+<em class="property">class </em><code class="sig-prename descclassname">server.server_database.</code><code class="sig-name descname">ServerDB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main class for <a href="#id1"><span class="problematic" id="id2">server_</span></a> database for SQLAlchemy</p>
+<dl class="py class">
+<dt id="server.server_database.ServerDB.ActiveUsers">
+<em class="property">class </em><code class="sig-name descname">ActiveUsers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">login_time</span></em>, <em class="sig-param"><span class="n">keys</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.ActiveUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>active users class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_database.ServerDB.AllUsers">
+<em class="property">class </em><code class="sig-name descname">AllUsers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em>, <em class="sig-param"><span class="n">pwd_hash</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.AllUsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>all users class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_database.ServerDB.Contacts">
+<em class="property">class </em><code class="sig-name descname">Contacts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">friend_id</span></em>, <em class="sig-param"><span class="n">date_add</span></em>, <em class="sig-param"><span class="n">date_remove</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.Contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>contacts relations class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_database.ServerDB.LoginHistory">
+<em class="property">class </em><code class="sig-name descname">LoginHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.LoginHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>login history class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_database.ServerDB.Messages">
+<em class="property">class </em><code class="sig-name descname">Messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">to_user</span></em>, <em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.Messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>messages history class</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_database.ServerDB.MessagesCount">
+<em class="property">class </em><code class="sig-name descname">MessagesCount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">updated</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.MessagesCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>messages count class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.active_users_list">
+<code class="sig-name descname">active_users_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.active_users_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of active users
+:return: active users queryset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.add_contact">
+<code class="sig-name descname">add_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user</span></em>, <em class="sig-param"><span class="n">friend</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.add_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>func to add new contact and ave in database
+:param user: username
+:param friend: contact name
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.check_pwd">
+<code class="sig-name descname">check_pwd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.check_pwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns password hash for user
+:param user: username
+:return: password hash, str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.check_user">
+<code class="sig-name descname">check_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.check_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>func user existing
+:param user: username
+:return: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.delete_contact">
+<code class="sig-name descname">delete_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user</span></em>, <em class="sig-param"><span class="n">friend</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.delete_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>func to deactivate (delete) contact
+:param user: username
+:param friend: contact name
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.get_contact">
+<code class="sig-name descname">get_contact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.get_contact" title="Permalink to this definition">¶</a></dt>
+<dd><p>func returns users contacts list
+:param username: username
+:return: contacts lsit</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.get_keys">
+<code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns public key of user
+:param name:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.get_messages_count">
+<code class="sig-name descname">get_messages_count</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.get_messages_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns count of messages
+:param username: username
+:return: queryset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.login_history">
+<code class="sig-name descname">login_history</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.login_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>login user history
+:param username: username
+:return: login history queryset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.message_history">
+<code class="sig-name descname">message_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.message_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns messages for user
+:return: messages history queryset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.messages_count">
+<code class="sig-name descname">messages_count</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sender</span></em>, <em class="sig-param"><span class="n">receiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.messages_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>func counts messages for each user
+:param sender: username
+:param receiver: username
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.messages_list">
+<code class="sig-name descname">messages_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.messages_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>get user message history
+:param username: username
+:return: messages history queryset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.user_login">
+<code class="sig-name descname">user_login</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em>, <em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">pwd_hash</span></em>, <em class="sig-param"><span class="n">keys</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.user_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>user login func
+:param username: username
+:param ip: ip address
+:param port: ip port
+:param pwd_hash: user password hash
+:param keys: user public key
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.user_logout">
+<code class="sig-name descname">user_logout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.user_logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>user logout func
+:param username: username
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="server.server_database.ServerDB.users_list">
+<code class="sig-name descname">users_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.server_database.ServerDB.users_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of all users
+:return: users queryset</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="server-gui-py">
+<h2>server_gui.py<a class="headerlink" href="#server-gui-py" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="server.server_gui.MainGui">
+<em class="property">class </em><code class="sig-prename descclassname">server.server_gui.</code><code class="sig-name descname">MainGui</code><a class="headerlink" href="#server.server_gui.MainGui" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id3"><span class="problematic" id="id4">server_</span></a> main window GUI settings</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_gui.HistoryWindow">
+<em class="property">class </em><code class="sig-prename descclassname">server.server_gui.</code><code class="sig-name descname">HistoryWindow</code><a class="headerlink" href="#server.server_gui.HistoryWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id5"><span class="problematic" id="id6">server_</span></a> history window GUI settings</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="server.server_gui.ConfigWindow">
+<em class="property">class </em><code class="sig-prename descclassname">server.server_gui.</code><code class="sig-name descname">ConfigWindow</code><a class="headerlink" href="#server.server_gui.ConfigWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id7"><span class="problematic" id="id8">server_</span></a> settings window GUI settings</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">messenger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="additionals.html">Additionals package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logs.html">Logs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client Module documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Server Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#server-py">server.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-database-py">server_database.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-gui-py">server_gui.py</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="client.html" title="previous chapter">Client Module documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, is_that_joke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/server.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
